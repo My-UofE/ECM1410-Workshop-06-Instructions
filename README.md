@@ -3,8 +3,9 @@
 
 **NOTE**
 
-The average duration to conclude this workshop is two hours. 
-Please make sure you always finish them. If you run into issues you should ask for advice during the timetabled workshops or office hours. 
+This workshop should take the average student about two hours to complete.
+
+Please work to complete all activities in the week they are set. If you run into issues you can get help during the timetabled workshops or office hours. 
 
 
 # 1. Unchecked exceptions 
