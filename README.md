@@ -276,9 +276,18 @@ There are two ways in which this can be done:
    1. *handle the exception* - the operation is enclosed by a `try-catch` clause, so the compiler can see that appropriate action will be taken to handle the exception.
    2. *declare the exception* - the `throws` keyword is used in the method definition to declare which exceptions may be thrown. This indicates that the appropriate action is to propagate the exception up the call stack, where it will be handled, or reach the JRM and terminate the program.
 
+For the next exercise we need to create a text file to read. In the codespace add a new file called `javaOrigin.txt` and paste in the following content:
+
+```
+The first version of Java was written in 1991.
+It was initially called Oak after an oak tree that 
+stood outside one of the founders offices, but
+later renamed to Java after the Indonesian coffee.
+```
+
 ### 2.1 `Checked1App.java`
 
-Put the code below in file `Checked1App.java`:
+Now we are ready to write an app to read the file. Put the code below in a new file `Checked1App.java`:
 
 ```java
 // import libraries from io (input/output)
@@ -567,9 +576,9 @@ public class RPSApp {
 
             //Step3: Check who wins
 
-            //Step4: output who wins round
+            //Step4: Output who played what and who won the round
 
-            //Step5: Print score
+            //Step5: Update and print player/computer scores
 
         }
     }
