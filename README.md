@@ -428,7 +428,7 @@ Check that the file compiles and runs (test with both `javaOrigin.txt` and a non
 
 Now copy your `Checked1App.java` code into a new file `Checked3App.java` (remember to update the corresponding class name). 
 
-In this file place the `try-catch` clause within the `readTxtFile()` method. ]
+In this file place the `try-catch` clause within the `readTxtFile()` method. 
 
 **Hint** In this case put all the code that can raise an exception in a single `try` code block, with two `catch` statements as above.
 
@@ -473,7 +473,7 @@ After the user has selected their choice the  computer player will select rock, 
 The program should keep track of the score, and continue playing rounds until the user enters `q` to quit.
 
 
-Start by using the template structure for the program below. 
+Start by using the template structure for the program below, and write additional code according to the comments to complete the functionality.
 
 ```java
 import java.util.Scanner;
@@ -578,12 +578,64 @@ public class RPSApp {
 
 ## 4. Generating Documentation
 
-The Java documentation and annotation
-Select one of the programs you have written above (for example, `Checked1App.java`), add the java documentation for it. Then type the following command in the
+The `javadoc` tool allows us to automatically generate a set of Java documentation for a project from the source code. 
 
-command line to generate the HTML documentation for this program.
+To generate the documentation classes and methods must be annotated using a comment black that preceeds the definition.
 
-   >> javadoc RPSApp.java -d docs
+The format of the comment block will be covered in the module lectures but we can see an example in the code above:
 
-For practicing the annotation, you may either try the AnnotationApp.java from the lecture slides, or you will practice one of the annotation (@Override) when we learn the inheritance concept.
+```java
+/**
+ * Check who wins
+ *
+ * @param h1 the first hand sign
+ * @param h2 the second hand sign
+ * @return 0 if two signs equal, 
+ *        -1 if the second sign wins, 
+ *         1 if the first sign wins
+ *
+ */
+public static int whoWins(HandSign h1, HandSign h2){
+        ...
+}
+```
 
+The top line of the comment block describes what the method does, and then additional `@param` and `@return` provide information on the inputs and output of the methods.
+
+You can find further guidance on `javadoc` in web tutorials e.g. [dummies.com: Using javadoc to document your classes](https://www.dummies.com/article/technology/programming-web-design/java/how-to-use-javadoc-to-document-your-classes-153265/)
+
+**TASK 4.1**
+
+Select one of the programs you have written above (for example, `RPSApp.java`) and generate the java documentation for it using terminal commands:
+
+First make a directory to store the output (you only need to run this once).
+
+```
+mkdir docs
+```
+
+Next use the `javadoc` tool to create the documentation:
+
+```
+javadoc RPSApp.java -d docs
+```
+
+To view the documentation it is easiest to open in a web browser on our computer.
+
+Zip up the documents folder using the commands below:
+
+```
+cd docs
+zip ../docs.zip .
+cd ..
+```
+
+In case you are unfamiliar with (linux) shell commands this does the following:
+
+(i) change directory to go into the `docs` directory. 
+
+(ii) create an archive in parent folder called `docs.zip` and add all files in current location
+
+(iii) change directory back into parent directory (back to worspace)
+
+You can now download the `docs.zip` file from the CodeSpace (right click on file in files panel) and unzip and browed the html documentation which will open on your computer.
