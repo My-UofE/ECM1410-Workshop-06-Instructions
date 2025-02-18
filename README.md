@@ -44,7 +44,7 @@ Note how we have added messages at the start and end of our `main` method. As we
 Compile the program and run it in ther terminal using command:
 
 ```bash
-java Unchecked1App
+java Unchecked1App "hello world"
 ```
 
 You should see the output:
@@ -59,7 +59,7 @@ s2: HELLO WORLD
 Now run the program without passing in a string:
 
 ```bash
-java Unchecked1App "hello world"
+java Unchecked1App 
 ```
 
 You should see it produces an error message stating that a `NullPointerException` has been raised, this is because `String` variable `s1` was initialised with `null` and if no command arguments are passed, will not reference a `String` object when line `s2 = s1.toUpperCase();` runs.
