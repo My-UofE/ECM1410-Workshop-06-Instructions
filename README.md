@@ -392,10 +392,10 @@ We can handle the exception in the `main()` method, e.g.
 try {
     readTxtFile(fileName);
 } catch (FileNotFoundException e) {
-    System.out.println("### FileNotFoundException caught"; 
+    System.out.println("### FileNotFoundException caught"); 
     System.out.println("### message: " + e.getMessage()); 
 } catch (IOException e) {
-    System.out.println("### IOException caught"; 
+    System.out.println("### IOException caught"); 
     System.out.println("### message: " + e.getMessage()); 
 }
 ```
