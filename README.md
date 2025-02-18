@@ -44,7 +44,7 @@ Note how we have added messages at the start and end of our `main` method. As we
 Compile the program and run it in ther terminal using command:
 
 ```bash
-java Unchecked1App "hello world"
+java Unchecked1App
 ```
 
 You should see the output:
